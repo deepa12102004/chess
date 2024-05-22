@@ -1,0 +1,24 @@
+import turtle
+t = turtle.Turtle()
+cSet=["White","Black"]
+x = 250
+y = 250
+
+for a in range (8):
+    t.penup()
+    t.goto(-x,y)
+    t.pendown()
+    cVar=a%2
+    y=y-50
+    for b in range (8):
+        if cVar==0:
+            cVar=1
+        else:
+            cVar=0
+        t.fillcolor(cSet[cVar])
+        t.begin_fill()
+        for n in range(5):
+            t.fd(50)
+            if n!=4:
+                t.right(90)
+        t.end_fill()
